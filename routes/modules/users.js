@@ -4,9 +4,7 @@ const passport = require('passport')
 const User = require("../../models/user")
 
 router.get('/login', (req, res) => {
-  console.log()
   res.locals.warning_msg = req.flash('error')
-  console.log(req.flash('error'))
   res.render('login')
 })
 
