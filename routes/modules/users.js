@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs')
 const User = require("../../models/user")
 
 router.get('/login', (req, res) => {
-  res.locals.warning_msg = req.flash('error')
+  res.locals.login_msg = req.flash('error')
   res.render('login')
 })
 
