@@ -9,8 +9,6 @@ if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config()
 }
 
-
-
 const routes = require('./routes')
 const usePassport = require('./config/passport')
 require('./config/mongoose')
@@ -37,7 +35,7 @@ app.use((req, res, next) => {
   res.locals.user = req.user
   res.locals.success_msg = req.flash('success_msg')
   res.locals.warning_msg = req.flash('warning_msg')
-  res.locals.warning_msg = req.flash('login_msg')
+  res.locals.login_msg = req.flash('login_msg')
   next()
 })
 
